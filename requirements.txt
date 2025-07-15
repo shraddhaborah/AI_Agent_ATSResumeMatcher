@@ -1,0 +1,7 @@
+streamlit
+pdfminer.six
+beautifulsoup4
+requests
+spacy
+scikit-learn
+sentence-transformers
