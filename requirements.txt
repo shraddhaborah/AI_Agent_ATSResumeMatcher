@@ -1,7 +1,7 @@
-streamlit
+gradio
 pdfminer.six
 beautifulsoup4
-requests
-spacy
-scikit-learn
 sentence-transformers
+scikit-learn
+spacy
+requests
