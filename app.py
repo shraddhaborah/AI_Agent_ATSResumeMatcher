@@ -3,12 +3,18 @@ import requests
 import os
 import re
 import spacy
+import spacy.cli
 from bs4 import BeautifulSoup
 from pdfminer.high_level import extract_text
 from sklearn.feature_extraction.text import CountVectorizer
 from sentence_transformers import SentenceTransformer, util
 
-# Load models
+# Ensure spaCy model is available
+try:
+    spacy.load("en_core_web_sm")
+except OSError:
+    spacy.cli.download("en_core_web_sm")
+
 nlp = spacy.load("en_core_web_sm")
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
